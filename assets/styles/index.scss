@@ -1,2 +1,23 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+.box {
+  border-style: solid;
+  height: 135px;
+  text-align: center;
+  width: 160px;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+.dropdown-menu {
+  font-size: 18px;
+  text-align: center;
+}
+
+.ttt-box {
+  margin: 0 auto;
+  width: 500px;
+}
