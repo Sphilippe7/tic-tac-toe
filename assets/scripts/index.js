@@ -50,13 +50,13 @@ $(".tl").click(function(){
   if (gameBoardArray[0][0] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";
-      $('.tl').text('x');
-      gameBoardArray[0][0] = 'x';
+      $('.tl').text('o');
+      gameBoardArray[0][0] = 'o';
     }
     else {
       currentPlayer = "Player2";
-      $('.tl').text('o');
-      gameBoardArray[0][0] = 'o';
+      $('.tl').text('x');
+      gameBoardArray[0][0] = 'x';
     }
     count++;
   }
@@ -67,13 +67,13 @@ $(".tm").click(function(){
   if (gameBoardArray[0][1] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";
-      $('.tm').text('x');
-      gameBoardArray[0][1] = 'x';
+      $('.tm').text('o');
+      gameBoardArray[0][1] = 'o';
     }
     else {
       currentPlayer = "Player2";
-      $('.tm').text('o');
-      gameBoardArray[0][1] = 'o';
+      $('.tm').text('x');
+      gameBoardArray[0][1] = 'x';
     }
     count++;
   }
@@ -84,13 +84,13 @@ $(".tr").click(function(){
   if (gameBoardArray[0][2] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";
-      $('.tr').text('x');
-      gameBoardArray[0][2] = 'x';
+      $('.tr').text('o');
+      gameBoardArray[0][2] = 'o';
     }
     else {
       currentPlayer = "Player2";
-      $('.tr').text('o');
-      gameBoardArray[0][2] = 'o';
+      $('.tr').text('x');
+      gameBoardArray[0][2] = 'x';
     }
     count++;
   }
@@ -101,13 +101,13 @@ $(".ml").click(function(){
   if (gameBoardArray[1][0] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";
-      $('.ml').text('x');
-      gameBoardArray[1][0] = 'x';
+      $('.ml').text('o');
+      gameBoardArray[1][0] = 'o';
     }
     else {
       currentPlayer = "Player2";
-      $('.ml').text('o');
-      gameBoardArray[1][0] = 'o';
+      $('.ml').text('x');
+      gameBoardArray[1][0] = 'x';
     }
     count++;
   }
@@ -118,13 +118,13 @@ $(".mm").click(function(){
   if (gameBoardArray[1][1] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";
-      $('.mm').text('x');
-      gameBoardArray[1][1] = 'x';
+      $('.mm').text('o');
+      gameBoardArray[1][1] = 'o';
     }
     else {
       currentPlayer = "Player2";
-      $('.mm').text('o');
-      gameBoardArray[1][1] = 'o';
+      $('.mm').text('x');
+      gameBoardArray[1][1] = 'x';
     }
     count++;
   }
@@ -135,13 +135,13 @@ $(".mr").click(function(){
   if (gameBoardArray[1][2] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";
-      $('.mr').text('x');
-      gameBoardArray[1][2] = 'x';
+      $('.mr').text('o');
+      gameBoardArray[1][2] = 'o';
     }
     else {
       currentPlayer = "Player2";
-      $('.mr').text('o');
-      gameBoardArray[1][2] = 'o';
+      $('.mr').text('x');
+      gameBoardArray[1][2] = 'x';
     }
     count++;
   }
@@ -152,13 +152,13 @@ $(".bl").click(function(){
   if (gameBoardArray[2][0] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";
-      $('.bl').text('x');
-      gameBoardArray[2][0] = 'x';
+      $('.bl').text('o');
+      gameBoardArray[2][0] = 'o';
     }
     else {
       currentPlayer = "Player2";
-      $('.bl').text('o');
-      gameBoardArray[2][0] = 'o';
+      $('.bl').text('x');
+      gameBoardArray[2][0] = 'x';
     }
     count++;
   }
@@ -169,13 +169,13 @@ $(".bm").click(function(){
   if (gameBoardArray[2][1] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";
-      $('.bm').text('x');
-      gameBoardArray[2][1] = 'x';
+      $('.bm').text('o');
+      gameBoardArray[2][1] = 'o';
     }
     else {
       currentPlayer = "Player2";
-      $('.bm').text('o');
-      gameBoardArray[2][1] = 'o';
+      $('.bm').text('x');
+      gameBoardArray[2][1] = 'x';
     }
     count++;
   }
@@ -186,13 +186,13 @@ $(".br").click(function(){
   if (gameBoardArray[2][2] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";
-      $('.br').text('x');
-      gameBoardArray[2][2] = 'x';
+      $('.br').text('o');
+      gameBoardArray[2][2] = 'o';
     }
     else {
       currentPlayer = "Player2";
-      $('.br').text('o');
-      gameBoardArray[2][2] = 'o';
+      $('.br').text('x');
+      gameBoardArray[2][2] = 'x';
     }
     count++;
   }
