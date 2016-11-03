@@ -1,6 +1,6 @@
 'use strict';
 
-const store = require('../store');
+const api = require('../config');
 
 
 const success = (data) => {
@@ -10,8 +10,15 @@ const success = (data) => {
 
 
 const signInSuccess = data => {
-  store.user = data.user;
+  api.user = data.user;
   success(data);
+  console.log(data);
+};
+
+const signUpSuccess = data => {
+  api.user = data.user;
+  success(data);
+  console.log(data);
 };
 
 const failure = (error) => {
@@ -23,4 +30,5 @@ module.exports = {
   failure,
   success,
   signInSuccess,
+  signUpSuccess,
 };

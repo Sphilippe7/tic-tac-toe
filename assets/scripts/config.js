@@ -1,7 +1,7 @@
 'use strict';
 
-const config = {
+const api = {
 host: "https://aqueous-atoll-85096.herokuapp.com/"
 };
 
-module.exports = config;
+module.exports = api;
