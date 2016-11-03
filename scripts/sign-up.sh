@@ -2,7 +2,7 @@
 
 #API="http://httpbin.org"
 #URL_PATH="/post"
-API="http://localhost:4741"
+API="https://aqueous-atoll-85096.herokuapp.com/"
 URL_PATH="/sign-up"
 curl "${API}${URL_PATH}" \
   --include \

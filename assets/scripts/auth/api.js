@@ -17,15 +17,6 @@ const signUp = (data) =>
       data,
     });
 
-    const changePassword = (data) =>
-      $.ajax({
-        url: config.host + '/change-password/' + store.user.id,
-        method: 'PATCH',
-        data,
-        headers: {
-          Authorization: 'Token token=' + store.user.token,
-        }
-      });
 
 const signOut = () =>
 $.ajax({
@@ -36,9 +27,9 @@ $.ajax({
   },
 });
 
+
 module.exports = {
   signUp,
   signIn,
-  changePassword,
   signOut,
 };
