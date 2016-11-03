@@ -9,7 +9,7 @@ const onSignUp = function (event) {
   let data = getFormFields(this);
   event.preventDefault();
   api.signUp(data)
-    .then(ui.signUpsuccess)
+    .then(ui.signUpSuccess)
     .catch(ui.failure);
 };
 
@@ -23,9 +23,10 @@ const onSignIn = function (event) {
 
 
 const onSignOut = function (event) {
+debugger;
   event.preventDefault();
   api.signOut()
-    .then(ui.Success)
+    .then(ui.signOutSuccess)
     .catch(ui.failure);
   };
 

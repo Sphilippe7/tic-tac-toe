@@ -198,3 +198,12 @@ $(".br").click(function(){
   }
   checkforwinner();
 });
+
+//
+// let change_box= function(){
+//
+//   if($(this).text()===''){
+//     if(player_switch==='x'){
+//       $(this).css('background-color','black');
+//       $(this).text('X');
+//       player_turn();

@@ -21,6 +21,13 @@ const signUpSuccess = data => {
   console.log(data);
 };
 
+const signOutSuccess = data => {
+debugger;
+  api.user = data.user;
+  success(data);
+  console.log(data);
+};
+
 const failure = (error) => {
   $('#messages').text('fail');
   console.error(error);
@@ -31,4 +38,5 @@ module.exports = {
   success,
   signInSuccess,
   signUpSuccess,
+  signOutSuccess
 };
