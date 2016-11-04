@@ -23,19 +23,24 @@ const onSignIn = function (event) {
 
 
 const onSignOut = function (event) {
-debugger;
   event.preventDefault();
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure);
   };
 
-
+  const onChangePassword = function (event) {
+    event.preventDefault();
+    api.changePassword()
+      .then(ui.changePasswordSuccess)
+      .catch(ui.failure);
+    };
 
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp);
   $('.sign-in-form').on('submit', onSignIn);
   $('.sign-out-form').on('submit', onSignOut);
+  $('.change-password-form').on('submit', onChangePassword);
 
 };
 

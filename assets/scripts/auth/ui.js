@@ -22,8 +22,13 @@ const signUpSuccess = data => {
 };
 
 const signOutSuccess = data => {
-debugger;
-  api.user = data.user;
+api.user = data.user;
+  success(data);
+  console.log(data);
+};
+
+const changePasswordSuccess = data => {
+api.user = data.user;
   success(data);
   console.log(data);
 };
@@ -38,5 +43,6 @@ module.exports = {
   success,
   signInSuccess,
   signUpSuccess,
-  signOutSuccess
+  signOutSuccess,
+  changePasswordSuccess,
 };

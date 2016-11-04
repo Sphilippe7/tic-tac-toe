@@ -27,9 +27,19 @@ $.ajax({
   },
 });
 
+const changePassword = () =>
+$.ajax({
+  url: api.host + '/change-password/' + api.user.id,
+  method: 'PATCH',
+  headers: {
+    Authorization: 'Token token=' + api.user.token,
+  },
+});
+
 
 module.exports = {
   signUp,
   signIn,
   signOut,
+  changePassword,
 };
