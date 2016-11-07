@@ -50,6 +50,11 @@
   </nav>
   <!-- NAV START HERE -->
 
+<h2>Player 1 is X</h2>
+<h3>Player 2 is O</h3>
+
+
+
   <!-- Modal -->
   <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -127,7 +132,7 @@
   </div>
 
 
-  <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal fade" id="ChangePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -137,6 +142,7 @@
 
         <div class="modal-body">
           <form class="change-password-form">
+            <label for="exampleInputPassword5">Password</label>
       <input type="password" name="passwords[old]" placeholder="old password">
           <input type="password" name="passwords[new]" placeholder="New Password">
         </form>
@@ -166,6 +172,9 @@
              <div class="col-xs-6 col-md-4 box br"></div>
            </div>
          </div>
+
+
+         <div class="display-winner"></div>
 
 
 
