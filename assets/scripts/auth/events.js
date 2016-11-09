@@ -36,12 +36,19 @@ const onSignOut = function (event) {
       .catch(ui.failure);
     };
 
+    const creategame = function (event) {
+      event.preventDefault();
+      api.creategame()
+        .then(ui.creategameSuccess)
+        .catch(ui.failure);
+    };
+
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp);
   $('.sign-in-form').on('submit', onSignIn);
   $('.sign-out-form').on('submit', onSignOut);
   $('.change-password-form').on('submit', onChangePassword);
-
+  $('.creategame').on('click', creategame);
 };
 
 module.exports = {

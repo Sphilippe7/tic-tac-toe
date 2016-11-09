@@ -38,6 +38,14 @@ const failure = (error) => {
   console.error(error);
 };
 
+const creategameSuccess = data => {
+  api.game = data.game;
+  success(data);
+  console.log(data);
+};
+
+
+
 module.exports = {
   failure,
   success,
@@ -45,4 +53,5 @@ module.exports = {
   signUpSuccess,
   signOutSuccess,
   changePasswordSuccess,
+  creategameSuccess,
 };

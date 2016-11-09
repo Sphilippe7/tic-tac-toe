@@ -36,10 +36,31 @@ $.ajax({
   },
 });
 
+const creategame = () =>
+$.ajax({
+  url: api.host + '/games',
+  method: 'POST',
+  headers: {
+    Authorization: 'Token token=' + api.user.token,
+  },
+});
+
+const updategame = (data) =>
+$.ajax({
+  url: api.host + '/games/' + api.game.id,
+  method: 'PATCH',
+  headers: {
+    Authorization: 'Token token=' + api.user.token,
+  },
+  data
+});
+
 
 module.exports = {
   signUp,
   signIn,
   signOut,
   changePassword,
+  creategame,
+  updategame
 };
