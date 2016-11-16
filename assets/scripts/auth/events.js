@@ -11,6 +11,7 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.failure);
+    $('#SignUpModal').modal('hide');
 };
 
 const onSignIn = function (event) {
@@ -19,7 +20,9 @@ const onSignIn = function (event) {
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.failure);
+    $('#SignInModal').modal('hide');
 };
+
 
 
 const onSignOut = function (event) {
@@ -27,13 +30,16 @@ const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure);
+    $('#SignOutModal').modal('hide');
   };
 
   const onChangePassword = function (event) {
+let data = getFormFields(this);
     event.preventDefault();
-    api.changePassword()
+    api.changePassword(data)
       .then(ui.changePasswordSuccess)
       .catch(ui.failure);
+      $('#ChangePasswordModal').modal('hide');
     };
 
     const creategame = function (event) {

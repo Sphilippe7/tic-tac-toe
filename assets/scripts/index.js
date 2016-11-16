@@ -78,7 +78,7 @@ const recordMove = function (box) {
   }
   else if(box === '.mm') {
     row = 1;
-    col = 2;
+    col = 1;
     index = 4;
   }
   else if(box === '.mr') {
@@ -101,6 +101,7 @@ const recordMove = function (box) {
     col = 2;
     index = 8;
   }
+
   if (gameBoardArray[row][col] === "box") {
     if (count % 2 === 0) {
       currentPlayer = "Player1";

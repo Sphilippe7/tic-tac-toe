@@ -21,16 +21,15 @@ const signUpSuccess = data => {
   console.log(data);
 };
 
-const signOutSuccess = data => {
-api.user = data.user;
-  success(data);
-  console.log(data);
+const signOutSuccess = () => {
+api.user = null;
+  success(null);
+  console.log('signOutSuccess');
 };
 
-const changePasswordSuccess = data => {
-api.user = data.user;
-  success(data);
-  console.log(data);
+const changePasswordSuccess = () => {
+  success(null);
+  console.log('changePasswordSuccess');
 };
 
 const failure = (error) => {

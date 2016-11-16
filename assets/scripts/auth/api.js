@@ -5,14 +5,14 @@ const api = require('../config');
 
 const signUp = (data) =>
   $.ajax({
-    url: api.host + 'sign-up',
+    url: api.host + '/sign-up',
     method: 'POST',
     data,
   });
 
   const signIn = (data) =>
     $.ajax({
-      url: api.host + 'sign-in',
+      url: api.host + '/sign-in',
       method: 'POST',
       data,
     });
@@ -27,10 +27,11 @@ $.ajax({
   },
 });
 
-const changePassword = () =>
+const changePassword = (data) =>
 $.ajax({
   url: api.host + '/change-password/' + api.user.id,
   method: 'PATCH',
+  data,
   headers: {
     Authorization: 'Token token=' + api.user.token,
   },
