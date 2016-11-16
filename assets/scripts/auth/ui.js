@@ -1,6 +1,7 @@
 'use strict';
 
 const api = require('../config');
+const logic = require('../game/logic')
 
 
 const success = (data) => {
@@ -40,6 +41,7 @@ const failure = (error) => {
 const creategameSuccess = data => {
   api.game = data.game;
   success(data);
+  logic.enableGame();
   console.log(data);
 };
 
