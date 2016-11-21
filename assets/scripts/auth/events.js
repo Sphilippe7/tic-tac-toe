@@ -46,6 +46,14 @@ const creategame = function (event) {
     .catch(ui.failure);
 };
 
+const resetgame = function (event) {
+  event.preventDefault();
+  api.resetgame()
+    .then(ui.resetgameSuccess)
+    .catch(ui.failure);
+};
+
+
 
 
 const addHandlers = () => {
@@ -54,6 +62,7 @@ const addHandlers = () => {
   $('.sign-out-form').on('submit', onSignOut);
   $('.change-password-form').on('submit', onChangePassword);
   $('.creategame').on('click', creategame);
+  $('.reset').on('click', resetgame);
 };
 
 module.exports = {

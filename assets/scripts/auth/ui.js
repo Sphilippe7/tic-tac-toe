@@ -1,7 +1,7 @@
 'use strict';
 
 const api = require('../config');
-const logic = require('../game/logic')
+const logic = require('../game/logic');
 
 
 const success = (data) => {
@@ -45,6 +45,13 @@ const creategameSuccess = data => {
   console.log(data);
 };
 
+const resetgameSuccess = data => {
+  api.game = data.game;
+  success(data);
+  logic.reset();
+  console.log(data);
+};
+
 
 
 module.exports = {
@@ -55,4 +62,5 @@ module.exports = {
   signOutSuccess,
   changePasswordSuccess,
   creategameSuccess,
+  resetgameSuccess,
 };

@@ -1,7 +1,6 @@
 'use strict';
 
-// const api = require('./api');
-// const ui = require('./ui');
+const api = require('../auth/api');
 
 let currentPlayer;
 let count = 1;
@@ -9,6 +8,18 @@ let count = 1;
 
 //Game Board Positioning
 let gameBoardArray = [["box", "box", "box"],["box", "box", "box"],["box", "box", "box"]];
+const disableGame = function() {
+  $(".tl").off('click');
+  $(".tm").off('click');
+  $(".tr").off('click');
+  $(".ml").off('click');
+  $(".mm").off('click');
+  $(".mr").off('click');
+  $(".bl").off('click');
+  $(".bm").off('click');
+  $(".br").off('click');
+};
+
 
 
 //Winning the game
@@ -26,6 +37,7 @@ let checkforwinner = function() {
   )
   {
     $('.display-winner').text('Player 1 Wins!');
+    disableGame();
   }
 
 
@@ -40,14 +52,18 @@ if((gameBoardArray[0][0] === "o" && gameBoardArray[0][1] === "o" && gameBoardArr
   )
   {
   $('.display-winner').text('Player 2 Wins!');
+  disableGame();
   }
+
 //if 9 turns have passed and there is no winner then its a tie!
 if(count === 9) {
   $('.display-winner').text('Its a Tie!');
+  disableGame();
 }
 };
 
 const recordMove = function (box) {
+
   let value, index, row, col;
   if (box === '.tl') {
     index = 0;
@@ -119,12 +135,28 @@ const recordMove = function (box) {
     });
   }
   checkforwinner();
-
 };
+
+const reset = function(){
+console.log('success');
+    $('.box').off('click');
+    $.each($('.box'), function(index, element) {
+        $(element).html('');
+        $(element).one('click', recordMove);
+      } ) ;
+    $('.box').html('');
+      if (recordMove.turn === "x"){
+         recordMove.turn = "o";
+      } else {
+        recordMove.turn = "x";
+      }
+    $('.ttt-box').show();
+    $('.display-winner').hide('Player 2 Wins!');
+};
+
 const enableGame = function(){
   $(".tl").click(function(){
     recordMove('.tl');
-
   });
 
   $(".tm").click(function(){
@@ -171,5 +203,7 @@ const enableGame = function(){
 
 module.exports = {
   checkforwinner,
-  enableGame
+  enableGame,
+  disableGame,
+  reset
 };

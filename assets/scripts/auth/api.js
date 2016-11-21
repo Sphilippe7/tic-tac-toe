@@ -56,6 +56,16 @@ $.ajax({
   data
 });
 
+const resetgame = () =>
+$.ajax({
+  url: api.host + '/games',
+  method: 'POST',
+  headers: {
+    Authorization: 'Token token=' + api.user.token,
+  },
+});
+
+
 
 module.exports = {
   signUp,
@@ -63,5 +73,6 @@ module.exports = {
   signOut,
   changePassword,
   creategame,
-  updategame
+  updategame,
+  resetgame,
 };
