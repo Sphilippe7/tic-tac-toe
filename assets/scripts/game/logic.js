@@ -23,6 +23,7 @@ const disableGame = function() {
 
 //Winning the game
 let checkforwinner = function() {
+  console.log(gameBoardArray);
   if((gameBoardArray[0][0] === "x" && gameBoardArray[0][1] === "x" && gameBoardArray[0][2] === "x")||
   (gameBoardArray[1][0] === "x" && gameBoardArray[1][1] === "x" && gameBoardArray[1][2] === "x") ||
   (gameBoardArray[2][0] === "x" && gameBoardArray[2][1] === "x" && gameBoardArray[2][2] === "x") ||
@@ -50,6 +51,7 @@ if((gameBoardArray[0][0] === "o" && gameBoardArray[0][1] === "o" && gameBoardArr
   (gameBoardArray[0][2] === "o" && gameBoardArray[1][1] === "o" && gameBoardArray[2][1] === "o")
   )
   {
+    console.log('O wins');
   $('.display-winner').text('Player 2 Wins!');
   disableGame();
   }
@@ -198,9 +200,9 @@ const reset = function(){
     gameBoardArray[2][0] = 'box';
     gameBoardArray[2][1] = 'box';
     gameBoardArray[2][2] = 'box';
-    $('.display-winner').hide();
+    $('.display-winner').text('');
+    count = 1;
     enableGame();
-    checkforwinner();
 };
 
 
