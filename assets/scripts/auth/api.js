@@ -65,6 +65,16 @@ $.ajax({
   },
 });
 
+const gamecount = () =>
+$.ajax({
+  url: api.host + '/games',
+  method: 'GET',
+  headers: {
+    Authorization: 'Token token=' + api.user.token,
+  },
+
+});
+
 
 
 module.exports = {
@@ -75,4 +85,5 @@ module.exports = {
   creategame,
   updategame,
   resetgame,
+  gamecount
 };

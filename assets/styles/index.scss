@@ -18,6 +18,10 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   text-align: center;
 }
 
+.display-winner {
+  font-size: 120px;
+}
+
 .ttt-box {
   margin: 0 auto;
   width: 500px;
@@ -34,7 +38,11 @@ body {
   background-color: white;
 }
 
-
 .creategame {
   color: black;
+}
+
+.reset {
+  margin: 0 auto;
+  text-align: center;
 }
