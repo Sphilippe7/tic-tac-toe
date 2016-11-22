@@ -21,7 +21,6 @@ const disableGame = function() {
 };
 
 
-
 //Winning the game
 let checkforwinner = function() {
   if((gameBoardArray[0][0] === "x" && gameBoardArray[0][1] === "x" && gameBoardArray[0][2] === "x")||
@@ -62,8 +61,8 @@ if(count === 9) {
 }
 };
 
-const recordMove = function (box) {
 
+const recordMove = function (box) {
   let value, index, row, col;
   if (box === '.tl') {
     index = 0;
@@ -137,67 +136,71 @@ const recordMove = function (box) {
   checkforwinner();
 };
 
-const reset = function(){
-console.log('success');
-    $('.box').off('click');
-    $.each($('.box'), function(index, element) {
-        $(element).html('');
-        $(element).one('click', recordMove);
-      } ) ;
-    $('.box').html('');
-      if (recordMove.turn === "x"){
-         recordMove.turn = "o";
-      } else {
-        recordMove.turn = "x";
-      }
-    $('.ttt-box').show();
-    $('.display-winner').hide('Player 2 Wins!');
-};
+
 
 const enableGame = function(){
-  $(".tl").click(function(){
+  console.log('enabling game');
+  $(".tl").on('click', function(){
     recordMove('.tl');
   });
 
-  $(".tm").click(function(){
+  $(".tm").on('click', function(){
     recordMove('.tm');
 
   });
 
-  $(".tr").click(function(){
+  $(".tr").on('click', function(){
     recordMove('.tr');
 
   });
 
-  $(".ml").click(function(){
+  $(".ml").on('click', function(){
     recordMove('.ml');
 
   });
 
-  $(".mm").click(function(){
+  $(".mm").on('click', function(){
     recordMove('.mm');
 
   });
 
-  $(".mr").click(function(){
+  $(".mr").on('click', function(){
     recordMove('.mr');
 
   });
 
-  $(".bl").click(function(){
+  $(".bl").on('click', function(){
     recordMove('.bl');
 
   });
 
-  $(".bm").click(function(){
+  $(".bm").on('click', function(){
     recordMove('.bm');
 
   });
 
-  $(".br").click(function(){
+  $(".br").on('click', function(){
     recordMove('.br');
 
   });
+};
+
+const reset = function(){
+    $('.box').off('click');
+    $('.box').html('');
+    recordMove.turn = "x";
+    gameBoardArray[0][0] = 'box';
+    gameBoardArray[0][1] = 'box';
+    gameBoardArray[0][2] = 'box';
+    gameBoardArray[1][0] = 'box';
+    gameBoardArray[1][1] = 'box';
+    gameBoardArray[1][2] = 'box';
+    gameBoardArray[2][0] = 'box';
+    gameBoardArray[2][1] = 'box';
+    gameBoardArray[2][2] = 'box';
+    $('.display-winner').hide();
+    enableGame();
+    checkforwinner();
 };
 
 
