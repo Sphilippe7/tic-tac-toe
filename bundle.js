@@ -345,7 +345,6 @@ webpackJsonp([0],[
 	};
 
 	var gamecountSuccess = function gamecountSuccess(data) {
-	  api.game = data.game;
 	  success(data);
 	  $('.gamecountmessage').text('You have played ' + data.games.length + ' ' + 'games');
 	  console.log(data.games.length);
