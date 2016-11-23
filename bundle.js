@@ -315,6 +315,8 @@ webpackJsonp([0],[
 	  success(null);
 	  console.log('signOutSuccess');
 	  $('.signed-in').hide();
+	  $('.signed-out').show();
+	  logic.disableGame();
 	};
 
 	var changePasswordSuccess = function changePasswordSuccess() {
@@ -330,7 +332,7 @@ webpackJsonp([0],[
 	var creategameSuccess = function creategameSuccess(data) {
 	  api.game = data.game;
 	  success(data);
-	  logic.enableGame();
+	  logic.newgame();
 	  console.log(data);
 	};
 
