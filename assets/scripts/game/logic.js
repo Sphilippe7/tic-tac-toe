@@ -25,7 +25,7 @@ let checkforwinner = function() {
 
   (gameBoardArray[0][0] === "x" && gameBoardArray[1][1] === "x" && gameBoardArray[2][2] === "x") ||
 
-  (gameBoardArray[0][2] === "x" && gameBoardArray[1][1] === "x" && gameBoardArray[2][1] === "x")
+  (gameBoardArray[0][2] === "x" && gameBoardArray[1][1] === "x" && gameBoardArray[2][0] === "x")
   )
   {
     $('.display-winner').text('Player 1 Wins!');
@@ -40,7 +40,7 @@ if((gameBoardArray[0][0] === "o" && gameBoardArray[0][1] === "o" && gameBoardArr
   (gameBoardArray[0][1] === "o" && gameBoardArray[1][1] === "o" && gameBoardArray[2][1] === "o") ||
   (gameBoardArray[0][2] === "o" && gameBoardArray[1][2] === "o" && gameBoardArray[2][2] === "o") ||
   (gameBoardArray[0][0] === "o" && gameBoardArray[1][1] === "o" && gameBoardArray[2][2] === "o") ||
-  (gameBoardArray[0][2] === "o" && gameBoardArray[1][1] === "o" && gameBoardArray[2][1] === "o")
+  (gameBoardArray[0][2] === "o" && gameBoardArray[1][1] === "o" && gameBoardArray[2][0] === "o")
   )
   {
     console.log('O wins');
