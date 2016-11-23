@@ -56,7 +56,7 @@ $.ajax({
   data
 });
 
-const resetgame = () =>
+const newgame = () =>
 $.ajax({
   url: api.host + '/games',
   method: 'POST',
@@ -84,6 +84,6 @@ module.exports = {
   changePassword,
   creategame,
   updategame,
-  resetgame,
+  newgame,
   gamecount
 };

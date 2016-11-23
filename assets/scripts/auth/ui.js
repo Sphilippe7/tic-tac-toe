@@ -14,6 +14,8 @@ const signInSuccess = data => {
   api.user = data.user;
   success(data);
   console.log(data);
+  $('.signed-out').hide();
+  $('.signed-in').show();
 };
 
 const signUpSuccess = data => {
@@ -26,6 +28,7 @@ const signOutSuccess = () => {
 api.user = null;
   success(null);
   console.log('signOutSuccess');
+  $('.signed-in').hide();
 };
 
 const changePasswordSuccess = () => {
@@ -45,10 +48,11 @@ const creategameSuccess = data => {
   console.log(data);
 };
 
-const resetgameSuccess = data => {
+const newgameSuccess = data => {
   api.game = data.game;
   success(data);
-  logic.reset();
+  logic.newgame();
+  $('.gamecountmessage').text('');
   console.log(data);
 };
 
@@ -68,6 +72,6 @@ module.exports = {
   signOutSuccess,
   changePasswordSuccess,
   creategameSuccess,
-  resetgameSuccess,
+  newgameSuccess,
   gamecountSuccess
 };

@@ -3,21 +3,13 @@
 const api = require('../auth/api');
 
 let currentPlayer;
-let count = 1;
+let count = 0;
 
 
 //Game Board Positioning
 let gameBoardArray = [["box", "box", "box"],["box", "box", "box"],["box", "box", "box"]];
 const disableGame = function() {
-  $(".tl").off('click');
-  $(".tm").off('click');
-  $(".tr").off('click');
-  $(".ml").off('click');
-  $(".mm").off('click');
-  $(".mr").off('click');
-  $(".bl").off('click');
-  $(".bm").off('click');
-  $(".br").off('click');
+  $('.box').off('click');
 };
 
 
@@ -112,7 +104,7 @@ const recordMove = function (box) {
   }
 
   if (gameBoardArray[row][col] === "box") {
-    if (count % 2 === 0) {
+    if (count % 2 === 1) {
       currentPlayer = "Player1";
       $(box).text('o');
       value = gameBoardArray[row][col] = 'o';
@@ -187,8 +179,8 @@ const enableGame = function(){
   });
 };
 
-const reset = function(){
-    $('.box').off('click');
+const newgame = function(){
+    disableGame();
     $('.box').html('');
     recordMove.turn = "x";
     gameBoardArray[0][0] = 'box';
@@ -201,15 +193,14 @@ const reset = function(){
     gameBoardArray[2][1] = 'box';
     gameBoardArray[2][2] = 'box';
     $('.display-winner').text('');
-    count = 1;
+    count = 0;
     enableGame();
 };
-
 
 
 module.exports = {
   checkforwinner,
   enableGame,
   disableGame,
-  reset
+  newgame
 };
