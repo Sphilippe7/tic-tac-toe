@@ -59,7 +59,6 @@ const newgameSuccess = data => {
 };
 
 const gamecountSuccess = (data) => {
-  api.game = data.game;
   success(data);
   $('.gamecountmessage').text('You have played ' + data.games.length + ' ' + 'games');
   console.log(data.games.length);
