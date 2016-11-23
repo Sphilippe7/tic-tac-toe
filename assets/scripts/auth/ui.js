@@ -29,6 +29,8 @@ api.user = null;
   success(null);
   console.log('signOutSuccess');
   $('.signed-in').hide();
+  $('.signed-out').show();
+  logic.disableGame();
 };
 
 const changePasswordSuccess = () => {
@@ -44,7 +46,7 @@ const failure = (error) => {
 const creategameSuccess = data => {
   api.game = data.game;
   success(data);
-  logic.enableGame();
+  logic.newgame();
   console.log(data);
 };
 

@@ -197,7 +197,6 @@ const newgame = function(){
     enableGame();
 };
 
-
 module.exports = {
   checkforwinner,
   enableGame,
