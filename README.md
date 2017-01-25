@@ -1,6 +1,9 @@
 My Tic Tac Toe Project:
 
+<<<<<<< HEAD
 URL: https://sphilippe7.github.io/tic-tac-toe/
+=======
+>>>>>>> master
 
 Wireframe:
 
