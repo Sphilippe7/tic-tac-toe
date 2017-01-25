@@ -2,13 +2,21 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 .box {
-  border-style: solid;
-  height: 135px;
-  text-align: center;
-  width: 160px;
-  font-size: 85px;
+    border-style: solid;
+    height: 135px;
+    text-align: center;
+    width: 160px;
+    font-size: 85px;
+    color: white;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 0px 0px 30px rgb(0, 148, 255);
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    background-color: black;
 }
-
 .navbar-brand {
   font-size: 30px;
 }
@@ -20,6 +28,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 .display-winner {
   font-size: 120px;
+  color: black;
 }
 
 .gamecountmessage {
